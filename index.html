@@ -1,0 +1,248 @@
+<!--
+                                 _.._        ,------------.
+                               ,'      `.    ( 听说你想偷我的源码! )
+                              /  __) __` \    `-,----------'
+                             (  (`-`(-')  ) _.-'
+                             /)  \  = /  (
+                            /'    |--' .  \
+                           (  ,---|  `-.)__`
+                            )(  `-.,--'   _`-.
+                           '/,'          (  Uu",
+                            (_       ,    `/,-' )
+                            `.__,  : `-'/  /`--'
+                              |     `--'  |
+                              `   `-._   /
+                               \        (
+                               /\ .      \.
+                              / |` \     ,-\
+                             /  \| .)   /   \
+                            ( ,'|\    ,'     :
+                            | \,`.`--"/      }
+                            `,'    \  |,'    /
+                           / "-._   `-/      |
+                           "-.   "-.,'|     ;
+                          /        _/["---'""]
+                         :        /  |"-     '
+                         '           |      /
+                                     `      |
+
+
+            ---------------------------------------------------------------
+            -           听说你想偷我的源码？？？？？                            -
+            -                请尊重原作者@陈宏洲                              -
+            -                  如需要源代码请@2915537708@qq.com              -
+            -                       ver.2.1                               -
+            -                           -Time: 2017-6-20_24                  -
+            -                           -by @陈宏洲                        -
+            -                           -域名备案中                         -
+            ---------------------------------------------------------------
+                                                                                                    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>    A T M O Z F E A R S</title>
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/index/style.css"><!--风格表-->
+    <link href="https://cdn.bootcss.com/hover.css/2.1.1/css/hover-min.css" rel="stylesheet"><!--hover效果-->
+    <link rel="icon" href="favicon.ico"><!--icon-->
+    <style type="text/css">
+        html,body{height: 100%;}
+        .canvas-box{
+            position: fixed;left: 0;top: 0;z-index: -1;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.2,1.2);
+        }
+    </style>
+</head>
+<body oncontextmenu="window.event.returnValue=false" onkeypress="window.event.returnValue=false" onkeydown="window.event.returnValue=false" onkeyup="window.event.returnValue=false" ondragstart="window.event.returnValue=false" onselectstart="event.returnValue=false">
+        <div class="canvas-box">
+            <canvas id="canvas">你的浏览器不支持canvas</canvas>
+        </div>
+        <div class="content">
+            <div class="con">
+                <div class="w">
+                    <div class="img-" title="跟着我一起摇摆，左右左"></div>
+                </div>
+                <div class="con-text">
+                    <p>
+                        <span>陈宏洲</span>
+                        欢迎你来到我的世界
+                    </p>
+                    <hr class="line-1 line">
+                    <a href="views/nav.html" target="_blank" title="版本号: ver.2.0.0">导航</a>
+                    <a href="/wp" target="_blank" title="版本号：ver.1.0.0">博客</a>
+                    <a href="views/about.html" target="_blank" title="版本号：ver.1.1.0">关于我</a>
+                    <a href="views/music.html" target="_blank">音乐</a>
+                    <a href="views/works.html" target="_blank">作品</a>
+                    <a href="views/dy/qzone.qq.com/index.php" target="_blank">QQ空间</a>
+                    <a href="views/text.html" target="_blank">小站</a>
+                    <a href="views/history.html" target="_blank">版本更新</a>
+                    <hr class="line-2 line">
+                </div>
+            </div>
+            <div class="tips">
+                <img src="images/index/sxbk.gif" alt="貌似你人品有问题" title="禁止盗链！">
+                <!--网络地址
+                <img src="https://b-ssl.duitang.com/uploads/item/201207/09/20120709153647_kK4Fm.gif" alt="貌似你的网络有问题" title="禁止盗链">
+                -->
+                <div class="m-"></div>
+                <div class="m"></div>
+                <br>
+                <span>前段从入门到完全放弃到自杀 &nbsp;/手动滑稽</span>
+            </div>
+            <!--
+            <div class="music">
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=28051000&auto=1&height=32"></iframe>
+            </div>
+            -->
+            <div class="footer">
+                <h3>Copyright &copy;2017 [陈宏洲] Powered By [首页] Version 1.1.2_2017-6-20_24</h3>
+            </div>
+        </div>
+        <!--左边-->
+        <div class="l-r left">
+            <img src="images/index/a.png" alt="">
+        </div>
+        <!--右边-->
+        <div class="l-r right">
+            <img src="images/index/c.png" alt="">
+        </div>
+    <!--
+    <audio src="http://a2915537708.usa3v.net/music/Roald%20Velden%20-%20Tomorrow%20(Original%20Mix).mp3" loop autoplay></audio>
+<!---------------------------------------------------脚本-------------------------------------------------------------->
+    <!--引入jq库-->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <!--点击特效-->
+    <script type="text/javascript">
+        $("html,body").on("click",function(e){
+            anp(e);
+        })
+        function anp(e){
+            var n=Math.round(Math.random()*10);
+            var $i=$("<b>").text("+"+n);
+            var x=e.pageX,y=e.pageY;
+            $i.css({top:y-25,left:x,position:"absolute",color:"#ffffff"});
+            $("body").append($i);
+            $i.animate({top:y-180,opacity:0,"font-size":"1.4em"},1500,function(){
+                $i.remove();
+            });
+            e.stopPropagation();
+        }
+    </script>
+    <!--bg -->
+    <script>
+        var WINDOW_WIDTH = document.body.offsetWidth;
+        var WINDOW_HEIGHT = document.body.offsetHeight;
+        var canvas,context;
+        var num = 500;
+        var stars = [];
+        var mouseX = WINDOW_WIDTH/2;
+        var mouseY = WINDOW_HEIGHT/2;
+        var rnd;
+
+        window.onload = function(){
+            canvas = document.getElementById('canvas');
+            canvas.width = WINDOW_WIDTH;
+            canvas.height = WINDOW_HEIGHT;
+
+            context = canvas.getContext('2d');
+
+            addStar();
+            setInterval(render,33);
+            liuxing();
+
+            // render();
+            document.body.addEventListener('mousemove',mouseMove);
+        }
+
+        function liuxing(){
+            var time = Math.round(Math.random()*3000+33);
+            setTimeout(function(){
+                rnd = Math.ceil(Math.random()*stars.length)
+                liuxing();
+            },time)
+        }
+
+        function mouseMove(e){
+            //因为是整屏背景，这里不做坐标转换
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        }
+
+        function render(){
+            //此处颜色为bg颜色
+            context.fillStyle = '#409798'
+        //    context.fillStyle = '#79d0d1'
+            //    context.fillStyle = 'rgba(0,0,0,0.1)';
+            context.fillRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
+            // context.clearRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT)
+            for(var i =0; i<num ; i++){
+                var star = stars[i];
+                if(i == rnd){
+                    star.vx = -5;
+                    star.vy = 20;
+                    context.beginPath();
+                    context.strokeStyle = 'rgba(255,255,255,'+star.alpha+')';
+                    context.lineWidth = star.r;
+                    context.moveTo(star.x,star.y);
+                    context.lineTo(star.x+star.vx,star.y+star.vy);
+                    context.stroke();
+                    context.closePath();
+                }
+                star.alpha += star.ra;
+                if(star.alpha<=0){
+                    star.alpha = 0;
+                    star.ra = -star.ra;
+                    star.vx = Math.random()*0.2-0.1;
+                    star.vy = Math.random()*0.2-0.1;
+                }else if(star.alpha>1){
+                    star.alpha = 1;
+                    star.ra = -star.ra
+                }
+                star.x += star.vx;
+                if(star.x>=WINDOW_WIDTH){
+                    star.x = 0;
+                }else if(star.x<0){
+                    star.x = WINDOW_WIDTH;
+                    star.vx = Math.random()*0.2-0.1;
+                    star.vy = Math.random()*0.2-0.1;
+                }
+                star.y += star.vy;
+                if(star.y>=WINDOW_HEIGHT){
+                    star.y = 0;
+                    star.vy = Math.random()*0.2-0.1;
+                    star.vx = Math.random()*0.2-0.1;
+                }else if(star.y<0){
+                    star.y = WINDOW_HEIGHT;
+                }
+                context.beginPath();
+                var bg = context.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.r);
+                bg.addColorStop(0,'rgba(255,255,255,'+star.alpha+')')
+                bg.addColorStop(1,'rgba(255,255,255,0)')
+                context.fillStyle  = bg;
+                context.arc(star.x,star.y, star.r, 0, Math.PI*2, true);
+                context.fill();
+                context.closePath();
+            }
+        }
+
+        function addStar(){
+            for(var i = 0; i<num ; i++){
+                var aStar = {
+                    x:Math.round(Math.random()*WINDOW_WIDTH),
+                    y:Math.round(Math.random()*WINDOW_HEIGHT),
+                    r:Math.random()*3,
+                    ra:Math.random()*0.05,
+                    alpha:Math.random(),
+                    vx:Math.random()*0.2-0.1,
+                    vy:Math.random()*0.2-0.1
+                }
+                stars.push(aStar);
+            }
+        }
+    </script>
+</body>
+</html>
