@@ -1,4 +1,8 @@
-
+@font-face {
+    font-family: fz;
+    src: url(../../font/fz.ttf);
+}
+body{font-family: fz;cursor: default;}
 .head{
     position: fixed;
     top: -2px;
@@ -68,25 +72,18 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
 }
-/*
-#wrapBox{
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-
-}
-*/
 .box{
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
-/*
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-*/
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
 }
 
 .box01_content{  
@@ -113,30 +110,27 @@
 
 .head_img_div{
     position: absolute;
-    top: -20px;
-    left: 80px;
+    top: -60px;
+    left: 140px;
     z-index: 2;
     display: inline;
     width: 200px;
     height: 200px;
     margin-top: 80px;
 }
-
 .head_img {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: #78d1ff;
-    margin: 7px;
     -webkit-animation: headneon 1.5s ease-in-out infinite alternate;
     -moz-animation: headneon 1.5s ease-in-out infinite alternate;
     animation: headneon 1.5s ease-in-out infinite alternate;
 }
 .head_img:hover{
-    height: 210px;
     border-radius: 40%;
-    transition: all 50ms,400ms;
+    transition: all 200ms,800ms;
 }
 @-webkit-keyframes headneon {
     from {
@@ -167,7 +161,9 @@
                     0 0 20px #fff;
     }
 }
-
+.head_div_title{
+    margin-top: -200px;
+}
 .green_cycle_img{
     animation-name: clockwise;
     animation-duration:1s;
@@ -303,13 +299,13 @@
     transition: all ease 0.3s;
     filter:alpha(opacity=0);
     -moz-opacity:0;
-    -khtml-opacity: 0;
     opacity: 0;
     cursor: pointer;
 }
 
 .box01_content .box01_p:hover{
-    font-size: 22px;
+    transform: scale(1.3,1.3);
+    transition: all 100ms ease-in;
 }
 
 .float_btn{
@@ -414,7 +410,8 @@
 }
 
 #box02_text p:hover{
-    font-size: 22px;
+    transform: scale(1.2,1.2);
+    transition: all 200ms ease-in 50ms;
 }
 
 .box03_content{
@@ -442,7 +439,6 @@
     font-size: 14px;
     color: #fff;
     margin: 100px auto;
-    box-shadow: 1px 1px 15px #ccc;
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
@@ -471,29 +467,45 @@
 
 .foot{
     width: 100%;
-    background: #ffffff;
+    height: 100%;
     position: relative;
     padding-top: 60px;
     display: block;
+    color: #ffffff;
 }
-
+.foot .bg{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #636363 url("http://www.005.tv/uploads/allimg/160918/11405960a-11.jpg");
+    -webkit-background-size:120%;
+    background-size:120%;
+    z-index: -1;
+    opacity: .9;
+}
 .foot_info_main{
     width: 60%;
     margin: 0 auto;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eeeeee;
     font-size: 30px;
     text-align: center;
 }
 
 .foot_info_main p{
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 50px;
-    border-bottom: 1px dashed #888888;
+    border-bottom: 1px dashed #ffffff;
 }
 .foot_info_main a{
     display: inline-block;
+    color: #fff;
+    margin: 10px 0;
+}
+.foot_info_main a:hover{
+    transform: scale(1.5,1.5);
+    transition: all 200ms ease-in 50ms;
 }
 .foot_power{
     text-align: center;
@@ -502,7 +514,7 @@
 
 .foot_power h3{
     font-size: 12px;
-    color: #999999;
+    color: #fff;
     font-weight: normal;
 }
 

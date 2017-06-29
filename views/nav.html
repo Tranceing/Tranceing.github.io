@@ -43,22 +43,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>    A T M O Z F E A S</title>
+    <title>@陈宏洲</title>
     <link rel="stylesheet" href="../css/nav/style.css"><!--基础样式表-->
     <link rel="stylesheet" href="../css/base.css"><!--风格表-->
     <link rel="stylesheet" href="../css/top.css">
     <link href="https://cdn.bootcss.com/hover.css/2.1.1/css/hover-min.css" rel="stylesheet"><!--hover效果-->
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><!--字体icon-->
-    <link rel="icon" href="http://d.lanrentuku.com/down/png/1511/wsj2015/wsj2015-2.png"><!--icon-->
+    <link rel="icon" href="../favicon.ico">
 </head>
-<!--禁止复制-->
-<!---->
-<noscript>
-    <iframe src="*.htm"></iframe>
-</noscript>
-<!--
 <body oncontextmenu="window.event.returnValue=false" onkeypress="window.event.returnValue=false" onkeydown="window.event.returnValue=false" onkeyup="window.event.returnValue=false" ondragstart="window.event.returnValue=false" onselectstart="event.returnValue=false">
--->
     <header id="header" class="header-navigation">
         <div class="nav">
             <ul>
@@ -74,19 +67,19 @@
             </ul>
         </div>
     </header>
-    <div id="banner">
-        <!--
-        <canvas id="c"></canvas>
-        -->
-        <!--百度一下，你就知道-->
-        <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
-            <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
-            <input type="text"  onfocus="checkHttps" name="word"  size="30">
-            <input type="submit" value="百度搜索">
-        </form>
-    </div>
     <div id="center">
-        <div id="f1" class="w">
+            <div id="search" class="w">
+                <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+                    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+                    <a href="https://www.baidu.com/" target="_blank">
+                        <img src="../images/nav/baidu.png" alt="Baidu" align="bottom" border="0">
+                    </a>
+                    <input type="text"  onfocus="checkHttps" name="word"  size="30">
+                    <input type="submit" value="百度搜索">
+                    <a href="dashangwo.html" target="_blank" class="dashangwo">如果我的网站对你有很大帮助的话，你可以戳这里来打赏我，你的打赏是我最大的支持！</a>
+                </form>
+            </div>
+            <div id="f1" class="w">
             <div class="f1-list">
                 <a href="http://bilibili.tv" target="_blank" title="B站">
                     <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2810627290,1080409091&fm=58&s=8197C732C535FA313E526557030030BB&bpow=121&bpoh=75" alt="">
@@ -120,8 +113,6 @@
                 </a>
             </div>
         </div>
-        <!--快速导航-->
-        <div id="f-wrap">
             <div id="f2" class="w">
                 <strong class="fl"><i class="fa fa-codepen"></i>代码</strong>
                 <i class="fa fa-play fl"></i>
@@ -166,7 +157,6 @@
                     <li><a href="https://www.zhihu.com/question/34388831" target="_blank" class="hvr-underline-from-center">前段怎么走</a></li>
                 </ul>
             </div>
-            <!--代码-->
             <div id="f3" class="w">
                 <div class="f-wrap">
                     <strong class="fl"><i class="fa fa-video-camera"></i>视频</strong>
@@ -301,22 +291,12 @@
                     </ul>
                 </div>
             </div>
-            <!--
-            <div id="f6" class="w">
-                <strong>&nbsp;&nbsp;<i class="fa fa-envelope-open"></i>版本更新说明：ver.2.0.0</strong>
-                <div class="con">
-                    <p>// &nbsp;&nbsp;自我提高ing </p>
-                </div>
-                <!--飞翔-
-            </div>
-            -->
-        </div>
     </div>
     <div id="footer">
-        <p>Copyright &copy;2017 [陈宏洲] Powered By [导航] Version 2.0.0_2017-6-20_25</p>
+        <p>Copyright &copy;2017 [陈宏洲] Powered By [导航] Version 2.0.0_2017-6-20_29</p>
     </div>
     <div id="backtop">
-        <a href="#"><i class="fa fa-rocket"></i></a>
+        <a href="#" title="返回顶部"><i class="fa fa-rocket"></i></a>
     </div>
 <!---------------------------------------------------脚本-------------------------------------------------------------->
 <!--------------------------------------------------引入jq库----------------------------------------------------------->
@@ -558,6 +538,14 @@
                     }
                 };
             </script>
+            <!--上loading-->
+            <script type="text/javascript" src="../js/preload.js"></script>
+            <script type="text/javascript">
+    //调用
+    $.QianLoad.PageLoading({
+        sleep: 100
+    });
+</script>
 </body>
 </html>
 

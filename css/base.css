@@ -127,10 +127,7 @@ a{text-decoration: none;color: #000;cursor: pointer;}
 .none{display:none}
 
 @font-face {
-    font-family: cn;
-    src: url(../fonts/cn.ttf);
+    font-family: fz;
+    src: url(../font/fz.ttf);
 }
-@font-face {
-    font-family: zn;
-    src: url(../fonts/zn.ttf);
-}
+body{cursor: default;font-family: fz;font-size: 12px;}
