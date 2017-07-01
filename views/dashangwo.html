@@ -15,11 +15,41 @@
                     -webkit-background-size:100%;
                     background-size:100%;
                 }
-
                 #cyReward{
                     position: relative;
                     width: 50%;
                     margin: 100px auto;
+                }
+                .tips{
+                    position: absolute;
+                    top: 20px;
+                    width: 200px;
+                    color: #a3a3a3;
+                    background: #fff;
+                    text-align: center;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    left: 20px;
+                    line-height: 35px;
+                    cursor: pointer;
+                }
+                .tips span{
+                    line-height: 20px;
+                }
+                .tips i{font-weight: bold;font-style: normal;}
+                .line{
+                    position: absolute;
+                    top: -100px;
+                    left: 95px;
+                    width: 5px;
+                    height: 112px;
+                    background: #fff;
+                    z-index: -1;
+                }
+                .tips:hover{
+                    transform: scale(1.1,1.1);
+                    box-shadow: 1px 1px 10px #ccc;
+                    transition: all 300ms ease-in 50ms;
                 }
                 #body{
                     position: absolute;
@@ -92,10 +122,16 @@
     <!--
     <body oncontextmenu="window.event.returnValue=false" onkeypress="window.event.returnValue=false" onkeydown="window.event.returnValue=false" onkeyup="window.event.returnValue=false" ondragstart="window.event.returnValue=false" onselectstart="event.returnValue=false">
     -->
+    <div class="tips">
+        <i class="line"></i>
+        扫码即捐赠，感谢您的支持
+        <br>
+        <span>感谢@ <i title="它捐赠了1元">我不是汉子</i> 的红包</span>
+    </div>
     <div id="cyReward" style="align-content: center;text-align: center;" title="扫码即捐赠，谢谢支持！">
         <div id="body"></div>
 	    <div id="cy-reward-pop" style="display:block;">
-		    <div class="cy-reward-title">如果你觉得不错，请捐助我吧，所有的捐助将用于网站的建设、优化，服务器开支等</div>
+		    <div class="cy-reward-title">如果你觉得网站还不错，请捐助我吧，所有的捐助将用于网站的建设、优化，服务器</div>
 		    <div class="cy-reward-code">
             <img id="alipay-code" style="display:block;" src="../images/dashangwo/erweima.png">
         </div>

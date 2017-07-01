@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>@陈宏洲</title>
+	<title>&nbsp;@&nbsp;陈&nbsp;宏&nbsp;洲</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="apple-mobile-app-capable" content="yes">
     <meta name="apple-mobile-app-status-bar-style" content="black">
@@ -22,9 +22,14 @@
     <!--[if lt IE 8]>
      <h5 class="text-center">你的浏览器弱渣了，为了更好的浏览体验，赶快<a href="http://browsehappy.com/" style="color:#53bafb">升级浏览器</a>吧！！</h5>
         <![endif]-->
+    <style type="text/css">
+        .load-wrap {
+            height: 5px !important;
+        }
+    </style>
 </head>
 <body oncontextmenu="window.event.returnValue=false" onkeypress="window.event.returnValue=false" onkeydown="window.event.returnValue=false" onkeyup="window.event.returnValue=false" ondragstart="window.event.returnValue=false" onselectstart="event.returnValue=false">
-	<header class="head clearfix">
+<header class="head clearfix">
         <div class="head_logo_div">
             <a href="../index.html" class="hvr-bounce-to-bottom">Home</a>
         </div>
@@ -126,4 +131,12 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <!--主要-->
     <script type="text/javascript" src="../js/about-main.js"></script>
+    <!--loading调用-->
+    <script type="text/javascript" src="../js/preload.js"></script>
+    <script type="text/javascript">
+        //调用
+        $.QianLoad.PageLoading({
+            sleep: 50
+        });
+    </script>
 </html>

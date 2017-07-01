@@ -96,25 +96,27 @@ th {
     display: block;
     clear: both;
 }
-a{text-decoration: none;color: #000;cursor: pointer;}
+a{
+    text-decoration: none;color: #000;cursor: pointer;
+}
+
 .f12{font-size:12px}
 .f13{font-size:13px}
 .f14{font-size:14px}
 .f16{font-size:16px}
 .f20{font-size:20px}
-
 .fb{font-weight:bold}
 .fn{font-weight:normal}
 
 .t2{text-indent:2em}
-
 .lh150{line-height:150%}
 .lh180{line-height:180%}
 .lh200{line-height:200%}
 
 .unl{text-decoration:underline;}
 .no_unl{text-decoration:none;}
-/*定位*/
+
+
 .tl{text-align:left}
 .tc{text-align:center}
 .tr{text-align:right}
@@ -130,4 +132,8 @@ a{text-decoration: none;color: #000;cursor: pointer;}
     font-family: fz;
     src: url(../font/fz.ttf);
 }
-body{cursor: default;font-family: fz;font-size: 12px;}
+body{
+    cursor: default;
+    font-family: fz;
+    font-size: 12px;
+}
